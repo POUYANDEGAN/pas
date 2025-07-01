@@ -3,38 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>اطلاعات دستگاه دندان‌پزشکی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Tahoma, sans-serif;
-            background-color: #eef2f3;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
             direction: rtl;
-            text-align: right;
-            padding: 20px;
+            padding: 40px 20px;
+            margin: 0;
         }
+
         .container {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            max-width: 700px;
+            max-width: 800px;
             margin: auto;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
+
         h1 {
-            color: #004d4d;
             text-align: center;
+            color: #00695c;
+            margin-bottom: 30px;
         }
-        h2 {
-            color: #006666;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        ul {
-            list-style-type: disc;
-            padding-right: 20px;
-        }
+
         .section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
             margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #00796b;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #bbb;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #009688;
+            margin-left: 10px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #444;
         }
     </style>
 </head>
@@ -84,7 +112,6 @@
             <li>هزینه تعمیر: ۳٬۵۰۰٬۰۰۰ تومان</li>
         </ul>
     </div>
-
 </div>
 
 </body>
