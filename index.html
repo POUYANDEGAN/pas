@@ -16,7 +16,7 @@
         .container {
             max-width: 800px;
             margin: auto;
-            background-color: #ffffff;
+            background-color: white;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -38,7 +38,7 @@
         }
 
         .section:hover {
-            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
         }
 
         h2 {
@@ -55,7 +55,7 @@
 
         ul li::before {
             content: "✔";
-            color: #2196f3;
+            color: #1976d2;
             margin-left: 10px;
         }
 
@@ -63,31 +63,6 @@
             margin-bottom: 8px;
             font-size: 16px;
             color: #333;
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #90caf9;
-            border-radius: 8px;
-            font-size: 15px;
-            background-color: #ffffff;
-        }
-
-        form button {
-            background-color: #1976d2;
-            color: white;
-            padding: 10px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        form button:hover {
-            background-color: #0d47a1;
         }
     </style>
 </head>
@@ -108,7 +83,28 @@
     </div>
 
     <div class="section">
-        <h2>اطلاعات تعمیرات قبلی</h2>
+        <h2>متعلقات دستگاه</h2>
+        <ul>
+            <li>چراغ LED جراحی</li>
+            <li>سیستم ساکشن پرقدرت</li>
+            <li>کمپرسور هوای بدون روغن</li>
+            <li>پدال پایی چندکاره</li>
+            <li>صندلی با قابلیت تنظیم ارتفاع برقی</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>اطلاعات صاحب دستگاه</h2>
+        <ul>
+            <li>نام: دکتر سارا احمدی</li>
+            <li>تخصص: دندان‌پزشکی زیبایی</li>
+            <li>شماره تماس: 0912-123-4567</li>
+            <li>آدرس مطب: تهران، خیابان ولی‌عصر، پلاک ۱۰۲</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>اطلاعات تعمیرات</h2>
         <ul>
             <li>شرح تعمیر: تعویض پمپ ساکشن و سرویس کامل صندلی</li>
             <li>نام تعمیرکار: مهندس علی رضایی</li>
@@ -116,44 +112,7 @@
             <li>هزینه تعمیر: ۳٬۵۰۰٬۰۰۰ تومان</li>
         </ul>
     </div>
-
-    <div class="section">
-        <h2>افزودن تعمیر جدید</h2>
-        <form id="repairForm" onsubmit="addRepair(event)">
-            <label>شرح تعمیر:</label>
-            <textarea id="desc" required></textarea>
-
-            <label>نام تعمیرکار:</label>
-            <input type="text" id="technician" required>
-
-            <label>تاریخ تعمیر:</label>
-            <input type="date" id="date" required>
-
-            <label>هزینه تعمیر (تومان):</label>
-            <input type="number" id="cost" required>
-
-            <button type="submit">افزودن</button>
-        </form>
-        <ul id="repairList"></ul>
-    </div>
 </div>
-
-<script>
-    function addRepair(e) {
-        e.preventDefault();
-        const desc = document.getElementById('desc').value;
-        const tech = document.getElementById('technician').value;
-        const date = document.getElementById('date').value;
-        const cost = document.getElementById('cost').value;
-
-        const list = document.getElementById('repairList');
-        const item = document.createElement('li');
-        item.innerHTML = `شرح: ${desc} | تعمیرکار: ${tech} | تاریخ: ${date} | هزینه: ${cost} تومان`;
-        list.appendChild(item);
-
-        e.target.reset();
-    }
-</script>
 
 </body>
 </html>
